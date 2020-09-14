@@ -1,28 +1,32 @@
 fun main(args: Array<String>) {
-    println("Hello World")
-    println("This conversation is being recorded")
+//    //Kotlin infers that this is an Int
+//    val lives = 3
+//    var isGameOver = lives < 1
+//    println(isGameOver)
+//
+//    if(isGameOver) {
+//        println("You're dead!!!")
+//    } else {
+//        println("You're still alive...for now")
+//    }
+    println("How old are you?")
+    val age = readLine()!!.toInt()
+    println("age is $age")
+    val message: String
+    message = if (age < 18){
+        "You're too young to vote!"
+    } else if (age == 100) {
+        "You are soooo old"
+    } else {
+        "You can vote I guess."
+    }
+//    message = if (age < 18){
+//        "You're too young to vote!"
+//    } else if (age == 100) {
+//        "You are soooo old"
+//    } else {
+//        "You can vote I guess."
+//    }
 
-    val salutation = "From Russia with Love \n- V. Putin"
-    val kirkName = "James T Kirk"
-    println(salutation)
-
-    var madeUpTime = 25
-    madeUpTime++
-    madeUpTime += 5
-    print("Time you have left: $madeUpTime months")
-
-    val apples = 6
-    val oranges = 35
-    //example of String Interpolation
-    println("\n\nPutin wants ${apples + oranges} pieces of fruit.  \n\nallegedly. Please don't sue")
-    //val == let in Kotlin
-    val weeks = 130.0
-    val years = weeks/52
-    println("\n\n$years")
-
-    val name = "Putin"
-    println("My name is " + name)
-    println("This is $kirkName")
-
-
+    println(message)
 }
